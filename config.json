@@ -1,11 +1,11 @@
 {
   "business": {
-    "name": "Frisør Hansen AS",
-    "city": "Oslo",
+    "name": "Rio Frisør",
+    "city": "Sandvika",
     "category": "barbershop",
-    "phone": "+47 22 11 22 33",
-    "email": "post@frisorhansen.no",
-    "address": "Karl Johans gate 12, 0154 Oslo"
+    "phone": "+4748515251",
+    "email": "riofrisor@gmail.com",
+    "address": "Sandviksveien 163, 1337 Sandvika"
   },
   "theme": {
     "mode": "dark",
@@ -18,61 +18,138 @@
   "nav": {
     "variant": "transparent-scroll"
   },
-  "sections": ["hero", "trust-bar", "services", "about", "gallery", "testimonials", "contact"],
+  "sections": [
+    "hero",
+    "trust-bar",
+    "services",
+    "about",
+    "gallery",
+    "testimonials",
+    "contact"
+  ],
   "hero": {
     "variant": "fullscreen",
-    "eyebrow": "Profesjonell Hårsalong · Oslo",
-    "headline": "Hansen",
+    "eyebrow": "Frisør & Barbershop · Sandvika",
+    "headline": "Rio",
     "headlineAccent": "Frisør",
-    "subheadline": "Vi skaper mer enn bare hårklipp — vi skaper selvtillit. Opplev ekspertise og omsorg i hver behandling.",
+    "subheadline": "Opplev førsteklasses hårklipp, skjeggpleie og fargebehandlinger i hjertet av Sandvika — din stil, vår lidenskap.",
     "ctaText": "Bestill Time",
-    "ctaSecondary": "Se Tjenester"
+    "ctaSecondary": "Se Behandlinger"
   },
   "trustBar": {
     "items": [
-      { "value": "25+", "label": "År med erfaring" },
-      { "value": "5 000+", "label": "Fornøyde kunder" },
-      { "value": "100%", "label": "Fornøydhet garantert" },
-      { "value": "6", "label": "Dager åpent" }
+      {
+        "value": "1000+",
+        "label": "Fornøyde kunder"
+      },
+      {
+        "value": "6",
+        "label": "Dager åpent"
+      },
+      {
+        "value": "fra 399,-",
+        "label": "Herreklipp tilbud"
+      },
+      {
+        "value": "100%",
+        "label": "Dedikert service"
+      }
     ]
   },
   "services": {
-    "variant": "grid-icons",
-    "eyebrow": "Hva vi tilbyr",
-    "heading": "Våre Tjenester",
-    "cta": "Bestill Time",
+    "variant": "price-cards",
+    "eyebrow": "Våre behandlinger",
+    "heading": "Tjenester & Priser",
+    "cta": "Bestill Time Nå",
     "items": [
-      { "name": "Herreklipp", "desc": "Klassisk og moderne klipp tilpasset din stil og ansiktsform. Inkluderer vask og føning.", "icon": "Scissors", "price": "Fra 350 kr" },
-      { "name": "Dameklipp", "desc": "Profesjonell klipp med konsultasjon, vask, klipp og styling etter dine ønsker.", "icon": "Sparkles", "price": "Fra 550 kr" },
-      { "name": "Skjeggstell", "desc": "Profesjonell forming og stell av skjegg med varmt håndkle og premium produkter.", "icon": "Star", "price": "Fra 250 kr" }
+      {
+        "name": "Herreklipp",
+        "desc": "Klassisk eller moderne herreklipp, inkludert skin fade — tilpasset din personlige stil.",
+        "icon": "Scissors",
+        "price": "fra 450 kr"
+      },
+      {
+        "name": "Dameklipp, Vask & Føn",
+        "desc": "Komplett behandling med klipp, vask og profesjonell føning for et perfekt resultat.",
+        "icon": "Sparkles",
+        "price": "fra 800 kr"
+      },
+      {
+        "name": "Skjeggpleie",
+        "desc": "Presisjonsstylt skjeggtrimming og forming for et velstelt og maskulint uttrykk.",
+        "icon": "Crown",
+        "price": "fra 300 kr"
+      },
+      {
+        "name": "Farge & Striper",
+        "desc": "Profesjonell fargebehandling med ettervask eller elegante striper for ny glans og dimensjon.",
+        "icon": "Droplets",
+        "price": "fra 950 kr"
+      },
+      {
+        "name": "Keratin & Kur",
+        "desc": "Intensiv keratinbehandling og dyptgående kur med avslappende hodemassasje for silkemykt hår.",
+        "icon": "Flame",
+        "price": "fra 450 kr"
+      },
+      {
+        "name": "Ansiktspleie & Napping",
+        "desc": "Farging av bryn og vipper, napping av bryn eller hele ansikt — for et polert og friskt utseende.",
+        "icon": "Heart",
+        "price": "fra 250 kr"
+      }
     ]
   },
   "about": {
     "eyebrow": "Om Oss",
-    "heading": "Vår Historie",
-    "body": "Siden 1998 har vi servert kunder i Oslo med stolthet og lidenskap. Vi tror på at et godt hårklipp handler om mer enn utseende — det handler om selvtillit og velvære.",
-    "stat1": { "value": "25+", "label": "År med erfaring" },
-    "stat2": { "value": "5000+", "label": "Fornøyde kunder" },
-    "stat3": { "value": "100%", "label": "Fornøydhet garantert" }
+    "heading": "Håndverk Møter Stil",
+    "body": "Rio Frisør & Barbershop er Sandvikas dedikerte salong for alle som setter pris på kvalitet og personlig service. Vårt erfarne team behersker alt fra klassiske herreklipp og presise skin fades til fargebehandlinger og profesjonell hudpleie. Vi skaper en avslappet atmosfære der du kan lene deg tilbake og vite at resultatet alltid blir førsteklasses.",
+    "stat1": {
+      "value": "1000+",
+      "label": "Fornøyde kunder"
+    },
+    "stat2": {
+      "value": "6",
+      "label": "Behandlinger"
+    },
+    "stat3": {
+      "value": "100%",
+      "label": "Kvalitetsfokus"
+    }
   },
   "gallery": {
-    "eyebrow": "Portefølje",
+    "eyebrow": "Galleri",
     "heading": "Vårt Arbeid",
-    "subheading": "Hvert oppdrag utføres med stolthet og lidenskap for håndverket."
+    "subheading": "Et utvalg av klipp, stiler og behandlinger fra salongen vår i Sandvika."
   },
   "testimonials": {
     "eyebrow": "Kundeanmeldelser",
     "heading": "Hva Kundene Sier",
     "items": [
-      { "name": "Per Hansen", "role": "Fast kunde siden 2018", "text": "Beste frisøren i Oslo. Alltid fornøyd med resultatet og betjeningen er topp!", "rating": 5 },
-      { "name": "Lars Nilsen", "role": "Ny kunde", "text": "Fant Hansen Frisør via en venn og er veldig glad for det. Profesjonelt og hyggelig.", "rating": 5 },
-      { "name": "Ole Berg", "role": "Fast kunde siden 2020", "text": "Har prøvd mange frisører i Oslo men Hansen er klart best. Anbefales på det sterkeste.", "rating": 5 }
+      {
+        "name": "Henrik Johansen",
+        "role": "Fast kunde siden 2021",
+        "text": "Alltid en fantastisk opplevelse hos Rio Frisør. Skin faden sitter perfekt hver eneste gang, og stemningen i salongen er upåklagelig.",
+        "rating": 5
+      },
+      {
+        "name": "Camilla Ødegaard",
+        "role": "Fast kunde siden 2022",
+        "text": "Endelig en salong i Sandvika som leverer på både klipp og farge. Profesjonelt, hyggelig og resultatet overgår alltid forventningene mine.",
+        "rating": 5
+      },
+      {
+        "name": "Omar Khalil",
+        "role": "Ny kunde",
+        "text": "Ble anbefalt Rio av en kollega, og nå er jeg fast kunde. Skjeggtrimming og klipp til en veldig god pris — anbefales på det varmeste.",
+        "rating": 5
+      }
     ]
   },
   "contact": {
     "eyebrow": "Ta Kontakt",
-    "heading": "Kontakt Oss",
-    "subheading": "Vi svarer raskt og hjelper deg gjerne. Ta kontakt for time eller spørsmål."
+    "heading": "Bestill Din Time",
+    "subheading": "Åpent mandag–fredag 10–18, lørdag 10–17. Søndag stengt. Vi ser frem til å ta imot deg."
   },
   "images": {
     "hero": "barbershop/hero-01.jpg",
