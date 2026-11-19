@@ -48,7 +48,7 @@
       },
       {
         "value": "20%",
-        "label": "Rabatt for pensjonister"
+        "label": "Rabatt når du bestiller nå"
       },
       {
         "value": "100%",
@@ -78,23 +78,31 @@
             "desc": "Profesjonell fargebehandling og striper for ny glans og dimensjon.",
             "icon": "Droplets"
           }
+        ],
+        "gallery": [
+          "/rio/hair-waves.jpeg",
+          "/rio/hair-bob-side.jpeg",
+          "/rio/hair-bob-back.jpeg",
+          "/rio/salon-bright.jpeg"
         ]
       },
       {
         "id": "klinikk",
         "name": "Klinikk",
         "tagline": "Hud, kropp og skjønnhet",
-        "image": "/rio/hudpleie.jpeg",
+        "image": "/rio/hudpleie-ansikt.jpg",
         "items": [
           {
             "name": "Hudpleie",
-            "desc": "Ansiktsrens, dyprens, fukt og anti-age tilpasset din hudtype.",
-            "icon": "Sparkles"
+            "desc": "Klassisk ansiktsbehandling, mikrodermabrasjon og mikroneedling tilpasset din hudtype.",
+            "icon": "Sparkles",
+            "image": "/rio/hudpleie-ansikt.jpg"
           },
           {
             "name": "Fotpleie",
-            "desc": "Fjerning av hard hud og pleie for myke, sunne og velstelte føtter.",
-            "icon": "Footprints"
+            "desc": "Fotpleie og spa — fjerning av hard hud og pleie for myke, sunne føtter.",
+            "icon": "Footprints",
+            "image": "/rio/fotpleie-spa.jpg"
           },
           {
             "name": "Botoks",
@@ -108,13 +116,21 @@
           },
           {
             "name": "Massasje",
-            "desc": "Avslappende massasje som løsner spenninger.",
-            "icon": "Hand"
+            "desc": "Klassisk massasje som løsner spenninger og gir ro.",
+            "icon": "Hand",
+            "image": "/rio/massasje.jpg"
+          },
+          {
+            "name": "Voksbehandlinger",
+            "desc": "Voksing av armer, legger, bikinilinje, ansikt og rygg.",
+            "icon": "Leaf",
+            "image": "/rio/voks.jpg"
           },
           {
             "name": "Manikyr & Bodykyr",
-            "desc": "Velstelte negler og kroppsbehandling.",
-            "icon": "Gem"
+            "desc": "Manikyr og manikyr med neglelakk, samt bodykyr.",
+            "icon": "Gem",
+            "image": "/rio/manikyr.jpg"
           },
           {
             "name": "Vipper & Bryn",
@@ -124,8 +140,56 @@
           {
             "name": "Laser Hårfjerning",
             "desc": "Effektiv og trygg behandling for ben, armhuler, bikinilinje, rygg og ansikt.",
-            "icon": "Zap"
+            "icon": "Zap",
+            "image": "/rio/laser.jpeg"
           }
+        ],
+        "gallery": [
+          {
+            "src": "/rio/hudpleie-ansikt.jpg",
+            "title": "Ansiktsbehandlinger",
+            "lines": [
+              "Klassisk ansiktsbehandling",
+              "Ansiktsbehandling med mikrodermabrasjon",
+              "Ansiktsbehandling med mikroneedling"
+            ]
+          },
+          {
+            "src": "/rio/massasje.jpg",
+            "title": "Massasje",
+            "lines": [
+              "Klassisk massasje"
+            ]
+          },
+          {
+            "src": "/rio/voks.jpg",
+            "title": "Voksbehandlinger",
+            "lines": [
+              "Voksing av armer",
+              "Voksing av legger",
+              "Voksing av bikinilinje",
+              "Voksing av ansikt",
+              "Voksing av rygg"
+            ]
+          },
+          {
+            "src": "/rio/fotpleie-spa.jpg",
+            "title": "Fotpleie",
+            "lines": [
+              "Fotpleie og spa"
+            ]
+          },
+          {
+            "src": "/rio/manikyr.jpg",
+            "title": "Neglebehandlinger",
+            "lines": [
+              "Manikyr",
+              "Manikyr med neglelakk"
+            ]
+          },
+          "/rio/laser.jpeg",
+          "/rio/hudpleie.jpeg",
+          "/rio/fotpleie.jpeg"
         ]
       }
     ]
@@ -188,16 +252,16 @@
     "gallery": [
       "/rio/hair-bob-side.jpeg",
       "/rio/salon-bright.jpeg",
-      "/rio/hudpleie-pris.jpeg",
+      "/rio/massasje.jpg",
       "/rio/salon-dark.jpeg",
       "/rio/laser.jpeg",
-      "/rio/fotpleie.jpeg"
+      "/rio/fotpleie-spa.jpg"
     ]
   },
   "offer": {
     "badge": "Flash-tilbud",
-    "text": "20% rabatt for pensjonister",
-    "note": "Gjelder på alle våre lokasjoner. Oppgi at du er pensjonist ved bestilling.",
+    "text": "Bestill nå og få 20% rabatt",
+    "note": "Gjelder for alle kunder på alle våre lokasjoner.",
     "cta": "Bestill Time"
   },
   "locations": {

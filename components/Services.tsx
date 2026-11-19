@@ -216,9 +216,10 @@ function PriceCardsServices() {
 /* ─── Split Tabs ─────────────────────────────────────────────────────────────
    Multi-salon: tabs switch between groups (e.g. Frisør / Klinikk).
 ────────────────────────────────────────────────────────────────────────────── */
+type Shot = { src: string; title?: string; lines?: string[] };
 type Group = {
-  id: string; name: string; tagline: string; image?: string;
-  items: { name: string; desc: string; icon: string; price?: string }[];
+  id: string; name: string; tagline: string; image?: string; gallery?: (string | Shot)[];
+  items: { name: string; desc: string; icon: string; image?: string }[];
 };
 
 function SplitTabsServices() {
@@ -233,8 +234,12 @@ function SplitTabsServices() {
   const bodyColor = isLight ? "#64748b" : `${textColor}66`;
   const cardBorder = isLight ? "#e2e8f0" : `${textColor}0d`;
   const [active, setActive] = useState(0);
+  const [picked, setPicked] = useState<string | null>(null);
   const group = services.groups[active];
-  const img = group.image ? imgUrl(group.image) : "";
+  const shots: Shot[] = (group.gallery ?? (group.image ? [group.image] : [])).map((g) => (typeof g === "string" ? { src: g } : g));
+  const shot = shots.find((x) => x.src === picked) ?? shots.find((x) => x.src === group.image) ?? shots[0];
+  const current = shot?.src ?? "";
+  const img = current ? imgUrl(current) : "";
 
   return (
     <section id="tjenester" className="py-32 px-6" style={{ backgroundColor: bg }}>
@@ -245,7 +250,7 @@ function SplitTabsServices() {
           {services.groups.map((g, i) => {
             const on = i === active;
             return (
-              <button key={g.id} role="tab" aria-selected={on} onClick={() => setActive(i)}
+              <button key={g.id} role="tab" aria-selected={on} onClick={() => { setActive(i); setPicked(null); }}
                 className="px-8 sm:px-12 py-4 text-sm tracking-widest uppercase font-semibold font-[family-name:var(--font-inter)] transition-all duration-300"
                 style={{
                   backgroundColor: on ? accentColor : "transparent",
@@ -259,32 +264,58 @@ function SplitTabsServices() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-          <div className="lg:col-span-2 relative overflow-hidden min-h-[320px]" style={{ border: `1px solid ${cardBorder}` }}>
-            {img && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={img} alt={group.name} className="absolute inset-0 w-full h-full object-cover" />
-            )}
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.1))" }} />
-            <div className="absolute bottom-0 left-0 right-0 p-8">
-              <h3 className="font-[family-name:var(--font-playfair)] text-4xl font-semibold" style={{ color: accentColor }}>{group.name}</h3>
-              <p className="font-[family-name:var(--font-inter)] text-sm mt-2 text-white/80">{group.tagline}</p>
+          <div className="lg:col-span-2 lg:sticky lg:top-28 self-start">
+            <div className="relative overflow-hidden aspect-[4/3]" style={{ border: `1px solid ${cardBorder}` }}>
+              {img && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img key={img} src={img} alt={group.name} className="absolute inset-0 w-full h-full object-cover animate-fade-in" />
+              )}
+              {shot?.title ? (
+                <>
+                  <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.88), rgba(0,0,0,0) 70%)" }} />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="font-[family-name:var(--font-playfair)] text-3xl font-semibold" style={{ color: accentColor }}>{shot.title}</h3>
+                    <ul className="mt-2 space-y-0.5 font-[family-name:var(--font-inter)] text-sm text-white/90">
+                      {shot.lines?.map((l) => (
+                        <li key={l} className="flex items-start gap-2">
+                          <span className="mt-2 w-1 h-1 rounded-full flex-shrink-0" style={{ backgroundColor: accentColor }} />
+                          {l}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </>
+              ) : null}
             </div>
+            {shots.length > 1 && (
+              <div className="grid grid-cols-4 gap-2 mt-2">
+                {shots.map(({ src }) => {
+                  const on = src === current;
+                  return (
+                    <button key={src} onClick={() => setPicked(src)} aria-label="Vis bilde"
+                      className="relative aspect-square overflow-hidden transition-opacity duration-300"
+                      style={{ border: `2px solid ${on ? accentColor : "transparent"}`, opacity: on ? 1 : 0.6 }}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={imgUrl(src)} alt="" className="w-full h-full object-cover" />
+                    </button>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
           <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-4 content-start">
             {group.items.map((s, i) => {
               const Icon: LucideIcon = ICON_MAP[s.icon] ?? Star;
               return (
-                <div key={i} className="p-6 transition-colors duration-300"
-                  style={{ backgroundColor: isLight ? "#ffffff" : `${textColor}05`, border: `1px solid ${cardBorder}` }}>
+                <div key={i} onClick={() => s.image && setPicked(s.image)}
+                  className={`p-6 transition-colors duration-300 ${s.image ? "cursor-pointer" : ""}`}
+                  style={{ backgroundColor: isLight ? "#ffffff" : `${textColor}05`, border: `1px solid ${s.image && s.image === current ? `${accentColor}88` : cardBorder}` }}>
                   <div className="flex items-center gap-3 mb-3">
                     <Icon size={20} style={{ color: accentColor }} />
                     <h4 className="font-[family-name:var(--font-playfair)] text-lg font-semibold" style={{ color: headingColor }}>{s.name}</h4>
                   </div>
                   <p className="font-[family-name:var(--font-inter)] text-sm leading-relaxed font-light" style={{ color: bodyColor }}>{s.desc}</p>
-                  {s.price && (
-                    <p className="font-[family-name:var(--font-inter)] text-sm font-semibold mt-4" style={{ color: accentColor }}>{s.price}</p>
-                  )}
                 </div>
               );
             })}
