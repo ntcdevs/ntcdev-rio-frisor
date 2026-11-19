@@ -70,7 +70,7 @@ function GridIconsServices() {
           })}
         </div>
         <div className="text-center mt-16">
-          <a href="#kontakt" className="inline-block px-10 py-4 font-[family-name:var(--font-inter)] text-sm tracking-widest uppercase transition-all duration-300"
+          <a href="#bestill" className="inline-block px-10 py-4 font-[family-name:var(--font-inter)] text-sm tracking-widest uppercase transition-all duration-300"
             style={{ border: `1px solid ${accentColor}`, color: accentColor }}
             onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = accentColor; (e.currentTarget as HTMLElement).style.color = isLight ? "#ffffff" : primaryColor; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = "transparent"; (e.currentTarget as HTMLElement).style.color = accentColor; }}>
@@ -134,7 +134,7 @@ function AlternatingServices() {
           })}
         </div>
         <div className="text-center mt-16">
-          <a href="#kontakt" className="inline-block px-10 py-4 font-[family-name:var(--font-inter)] text-sm tracking-widest uppercase font-semibold transition-all duration-300"
+          <a href="#bestill" className="inline-block px-10 py-4 font-[family-name:var(--font-inter)] text-sm tracking-widest uppercase font-semibold transition-all duration-300"
             style={{ backgroundColor: accentColor, color: isLight ? "#ffffff" : primaryColor }}
             onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = "0.9"; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; }}>
@@ -196,7 +196,7 @@ function PriceCardsServices() {
                     style={{ color: featured ? (isLight ? `${primaryColor}cc` : "rgba(0,0,0,0.6)") : bodyColor }}>
                     {s.desc}
                   </p>
-                  <a href="#kontakt" className="block text-center py-3 text-sm tracking-widest uppercase font-semibold font-[family-name:var(--font-inter)] transition-opacity hover:opacity-90"
+                  <a href="#bestill" className="block text-center py-3 text-sm tracking-widest uppercase font-semibold font-[family-name:var(--font-inter)] transition-opacity hover:opacity-90"
                     style={{
                       backgroundColor: featured ? (isLight ? primaryColor : "#0c0c0c") : accentColor,
                       color: featured ? "#ffffff" : (isLight ? "#ffffff" : primaryColor),
@@ -323,7 +323,7 @@ function SplitTabsServices() {
         </div>
 
         <div className="text-center mt-16">
-          <a href="#kontakt" className="inline-block px-10 py-4 font-[family-name:var(--font-inter)] text-sm tracking-widest uppercase font-semibold transition-opacity hover:opacity-90"
+          <a href="#bestill" className="inline-block px-10 py-4 font-[family-name:var(--font-inter)] text-sm tracking-widest uppercase font-semibold transition-opacity hover:opacity-90"
             style={{ backgroundColor: accentColor, color: isLight ? "#ffffff" : primaryColor }}>
             {services.cta}
           </a>

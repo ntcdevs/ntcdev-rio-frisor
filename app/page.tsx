@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import FlashOffer from "@/components/FlashOffer";
 import Locations from "@/components/Locations";
 import Contact from "@/components/Contact";
+import BookingModal from "@/components/BookingModal";
 import Footer from "@/components/Footer";
 
 const SECTION_COMPONENTS: Record<string, React.ComponentType> = {
@@ -33,6 +34,7 @@ export default function Home() {
         return Component ? <Component key={key} /> : null;
       })}
       <Footer />
+      <BookingModal />
     </main>
   );
 }

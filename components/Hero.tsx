@@ -53,7 +53,7 @@ function FullscreenHero() {
           {hero.subheadline}
         </p>
         <div className="animate-fade-in-up animate-delay-400 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#kontakt" className="px-10 py-4 font-[family-name:var(--font-inter)] text-sm tracking-widest uppercase font-semibold transition-opacity duration-300 hover:opacity-90"
+          <a href="#bestill" className="px-10 py-4 font-[family-name:var(--font-inter)] text-sm tracking-widest uppercase font-semibold transition-opacity duration-300 hover:opacity-90"
             style={{ backgroundColor: accentColor, color: bg }}>
             {hero.ctaText}
           </a>
@@ -105,7 +105,7 @@ function SplitHero() {
             {hero.subheadline}
           </p>
           <div className="flex flex-wrap gap-4">
-            <a href="#kontakt" className="px-8 py-4 font-[family-name:var(--font-inter)] text-sm tracking-widest uppercase font-semibold transition-opacity duration-300 hover:opacity-90"
+            <a href="#bestill" className="px-8 py-4 font-[family-name:var(--font-inter)] text-sm tracking-widest uppercase font-semibold transition-opacity duration-300 hover:opacity-90"
               style={{ backgroundColor: accentColor, color: isLight ? "#ffffff" : primaryColor }}>
               {hero.ctaText}
             </a>
@@ -170,7 +170,7 @@ function MinimalHero() {
           {hero.subheadline}
         </p>
         <div className="animate-fade-in-up animate-delay-300 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#kontakt" className="px-10 py-4 font-[family-name:var(--font-inter)] text-sm tracking-widest uppercase font-semibold transition-opacity hover:opacity-90"
+          <a href="#bestill" className="px-10 py-4 font-[family-name:var(--font-inter)] text-sm tracking-widest uppercase font-semibold transition-opacity hover:opacity-90"
             style={{ backgroundColor: accentColor, color: bg }}>
             {hero.ctaText}
           </a>

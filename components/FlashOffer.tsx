@@ -25,7 +25,7 @@ export default function FlashOffer() {
           </div>
         </div>
         <a
-          href="#lokasjoner"
+          href="#bestill"
           className="px-8 py-3 text-sm tracking-widest uppercase font-semibold font-[family-name:var(--font-inter)] whitespace-nowrap transition-opacity hover:opacity-90"
           style={{ backgroundColor: primaryColor, color: accentColor }}
         >

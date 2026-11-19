@@ -273,27 +273,31 @@
         "area": "Røyken",
         "type": "Frisør & Klinikk",
         "address": "Bråsetveien 3, 3440 Røyken",
-        "phone": "+4792929256"
+        "phone": "+4792929256",
+        "bookingUrl": ""
       },
       {
         "name": "Rio Frisør og Klinikk",
         "area": "Slependen",
         "type": "Frisør & Klinikk",
         "address": "Slependveien 56A, 1341 Slependen",
-        "phone": "+4794182687"
+        "phone": "+4794182687",
+        "bookingUrl": ""
       },
       {
         "name": "Rio Frisør og Barbershop",
         "area": "Sandvika",
         "type": "Frisør & Barbershop",
         "address": "Sandviksveien 163, 1337 Sandvika",
-        "phone": "+4748515251"
+        "phone": "+4748515251",
+        "bookingUrl": ""
       },
       {
         "name": "Rio Klinikk",
         "area": "Lier",
         "type": "Klinikk",
-        "address": "Bruveien 2, 3403 Lier"
+        "address": "Bruveien 2, 3403 Lier",
+        "bookingUrl": ""
       }
     ]
   }
