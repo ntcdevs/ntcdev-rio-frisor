@@ -1,11 +1,9 @@
 {
   "business": {
     "name": "Rio Frisør og Klinikk",
-    "city": "Sandvika",
+    "city": "Sandvika, Slependen, Røyken og Lier",
     "category": "salon-clinic",
-    "phone": "+4748515251",
-    "email": "riofrisor@gmail.com",
-    "address": "Sandviksveien 163, 1337 Sandvika"
+    "email": "riofrisor@gmail.com"
   },
   "theme": {
     "mode": "dark",
@@ -20,35 +18,37 @@
   },
   "sections": [
     "hero",
+    "offer",
     "trust-bar",
     "services",
     "about",
     "gallery",
     "testimonials",
+    "locations",
     "contact"
   ],
   "hero": {
     "variant": "fullscreen",
-    "eyebrow": "Frisør & Klinikk · Sandvika",
+    "eyebrow": "Frisør & Klinikk · 4 lokasjoner",
     "headline": "Rio",
     "headlineAccent": "Frisør og Klinikk",
-    "subheadline": "To salonger under ett tak — frisør for hårklipp og farge, og klinikk for hudpleie, fotpleie, botoks, filler, massasje, vipper og laser hårfjerning.",
+    "subheadline": "Frisør, barbershop og klinikk på fire lokasjoner — hårklipp og farge, hudpleie, fotpleie, botoks, filler, massasje, vipper og laser hårfjerning.",
     "ctaText": "Bestill Time",
     "ctaSecondary": "Se Behandlinger"
   },
   "trustBar": {
     "items": [
       {
-        "value": "2",
-        "label": "Salonger under ett tak"
+        "value": "4",
+        "label": "Lokasjoner"
       },
       {
         "value": "1000+",
         "label": "Fornøyde kunder"
       },
       {
-        "value": "6",
-        "label": "Dager åpent"
+        "value": "20%",
+        "label": "Rabatt for pensjonister"
       },
       {
         "value": "100%",
@@ -71,14 +71,12 @@
           {
             "name": "Hårklipp",
             "desc": "Klipp for dame og herre, tilpasset din stil og hårtype.",
-            "icon": "Scissors",
-            "price": "fra 450 kr"
+            "icon": "Scissors"
           },
           {
             "name": "Farge",
             "desc": "Profesjonell fargebehandling og striper for ny glans og dimensjon.",
-            "icon": "Droplets",
-            "price": "fra 950 kr"
+            "icon": "Droplets"
           }
         ]
       },
@@ -91,8 +89,7 @@
           {
             "name": "Hudpleie",
             "desc": "Ansiktsrens, dyprens, fukt og anti-age tilpasset din hudtype.",
-            "icon": "Sparkles",
-            "price": "fra 500 kr"
+            "icon": "Sparkles"
           },
           {
             "name": "Fotpleie",
@@ -136,14 +133,14 @@
   "about": {
     "eyebrow": "Om Oss",
     "heading": "Frisør og Klinikk Under Ett Tak",
-    "body": "Rio Frisør og Klinikk samler to salonger på ett sted i Sandvika. Hos frisøren får du hårklipp og farge, og i klinikken tilbyr vi hudpleie, fotpleie, botoks, filler, massasje, manikyr, vipper og bryn samt laser hårfjerning. Alt i en avslappet atmosfære med fokus på kvalitet.",
+    "body": "Rio Frisør og Klinikk finnes på fire lokasjoner: Røyken, Slependen, Sandvika og Lier. Hos frisøren får du hårklipp og farge, og i klinikken tilbyr vi hudpleie, fotpleie, botoks, filler, massasje, manikyr, vipper og bryn samt laser hårfjerning. Alt i en avslappet atmosfære med fokus på kvalitet.",
     "stat1": {
       "value": "1000+",
       "label": "Fornøyde kunder"
     },
     "stat2": {
-      "value": "2",
-      "label": "Salonger"
+      "value": "4",
+      "label": "Lokasjoner"
     },
     "stat3": {
       "value": "100%",
@@ -153,7 +150,7 @@
   "gallery": {
     "eyebrow": "Galleri",
     "heading": "Vårt Arbeid",
-    "subheading": "Et utvalg fra frisøren og klinikken vår i Sandvika."
+    "subheading": "Et utvalg fra frisøren og klinikken vår."
   },
   "testimonials": {
     "eyebrow": "Kundeanmeldelser",
@@ -182,7 +179,7 @@
   "contact": {
     "eyebrow": "Ta Kontakt",
     "heading": "Bestill Din Time",
-    "subheading": "Åpent mandag–fredag 10–18, lørdag 10–17. Søndag stengt. Bestill time hos frisøren eller klinikken."
+    "subheading": "Ring din nærmeste lokasjon eller send oss en e-post, så hjelper vi deg med å bestille time."
   },
   "images": {
     "hero": "/rio/salon-dark.jpeg",
@@ -195,6 +192,45 @@
       "/rio/salon-dark.jpeg",
       "/rio/laser.jpeg",
       "/rio/fotpleie.jpeg"
+    ]
+  },
+  "offer": {
+    "badge": "Flash-tilbud",
+    "text": "20% rabatt for pensjonister",
+    "note": "Gjelder på alle våre lokasjoner. Oppgi at du er pensjonist ved bestilling.",
+    "cta": "Bestill Time"
+  },
+  "locations": {
+    "eyebrow": "Finn oss",
+    "heading": "Våre Lokasjoner",
+    "items": [
+      {
+        "name": "Rio Frisør og Klinikk",
+        "area": "Røyken",
+        "type": "Frisør & Klinikk",
+        "address": "Bråsetveien 3, 3440 Røyken",
+        "phone": "+4792929256"
+      },
+      {
+        "name": "Rio Frisør og Klinikk",
+        "area": "Slependen",
+        "type": "Frisør & Klinikk",
+        "address": "Slependveien 56A, 1341 Slependen",
+        "phone": "+4794182687"
+      },
+      {
+        "name": "Rio Frisør og Barbershop",
+        "area": "Sandvika",
+        "type": "Frisør & Barbershop",
+        "address": "Sandviksveien 163, 1337 Sandvika",
+        "phone": "+4748515251"
+      },
+      {
+        "name": "Rio Klinikk",
+        "area": "Lier",
+        "type": "Klinikk",
+        "address": "Bruveien 2, 3403 Lier"
+      }
     ]
   }
 }

@@ -9,6 +9,7 @@ const links = [
   { label: "Tjenester", href: "#tjenester" },
   { label: "Om Oss",    href: "#om-oss" },
   { label: "Galleri",   href: "#galleri" },
+  { label: "Lokasjoner", href: "#lokasjoner" },
   { label: "Kontakt",   href: "#kontakt" },
 ];
 

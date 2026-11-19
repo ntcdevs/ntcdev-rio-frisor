@@ -20,7 +20,7 @@ export default function Footer() {
             {business.name}
           </span>
           <nav className="flex items-center gap-8">
-            {["#tjenester", "#om-oss", "#galleri", "#kontakt"].map((href, i) => (
+            {["#tjenester", "#om-oss", "#galleri", "#lokasjoner", "#kontakt"].map((href, i) => (
               <a
                 key={href}
                 href={href}
@@ -29,7 +29,7 @@ export default function Footer() {
                 onMouseEnter={(e) => (e.currentTarget.style.color = theme.accentColor)}
                 onMouseLeave={(e) => (e.currentTarget.style.color = `${theme.textColor}40`)}
               >
-                {["Tjenester", "Om Oss", "Galleri", "Kontakt"][i]}
+                {["Tjenester", "Om Oss", "Galleri", "Lokasjoner", "Kontakt"][i]}
               </a>
             ))}
           </nav>
@@ -44,7 +44,7 @@ export default function Footer() {
             className="font-[family-name:var(--font-inter)] text-xs"
             style={{ color: `${theme.textColor}30` }}
           >
-            © {year} {business.name} · {business.city}
+            © {year} {business.name}
           </p>
           <p
             className="font-[family-name:var(--font-inter)] text-xs"

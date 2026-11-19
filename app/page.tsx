@@ -6,15 +6,19 @@ import Services from "@/components/Services";
 import About from "@/components/About";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
+import FlashOffer from "@/components/FlashOffer";
+import Locations from "@/components/Locations";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const SECTION_COMPONENTS: Record<string, React.ComponentType> = {
+  "offer":        FlashOffer,
   "trust-bar":    TrustBar,
   "services":     Services,
   "about":        About,
   "gallery":      Gallery,
   "testimonials": Testimonials,
+  "locations":    Locations,
   "contact":      Contact,
 };
 

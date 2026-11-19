@@ -1,5 +1,5 @@
 "use client";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
 import SectionHeader from "@/components/shared/SectionHeader";
 import config from "@/config.json";
 
@@ -14,25 +14,13 @@ export default function Contact() {
   const labelColor = isLight ? "#94a3b8" : `${textColor}40`;
 
   const items = [
-    business.phone && {
-      icon: Phone,
-      label: "Telefon",
-      value: business.phone,
-      href: `tel:${business.phone}`,
-    },
     business.email && {
       icon: Mail,
       label: "E-post",
       value: business.email,
       href: `mailto:${business.email}`,
     },
-    ("address" in business && business.address) && {
-      icon: MapPin,
-      label: "Adresse",
-      value: business.address as string,
-      href: undefined,
-    },
-  ].filter(Boolean) as { icon: typeof Phone; label: string; value: string; href?: string }[];
+  ].filter(Boolean) as { icon: typeof Mail; label: string; value: string; href?: string }[];
 
   return (
     <section
