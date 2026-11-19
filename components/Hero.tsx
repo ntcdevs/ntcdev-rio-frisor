@@ -190,8 +190,62 @@ function MinimalHero() {
   );
 }
 
+/* ─── Logo variant ───────────────────────────────────────────────────────────
+   Dark hero with the full logo shown whole beside the text (no cropping,
+   no overlay). Works for: a brand logo used as the hero image.
+────────────────────────────────────────────────────────────────────────────── */
+function LogoHero() {
+  const { theme, hero, business } = config;
+  const { accentColor, heroColor, primaryColor, textColor } = theme;
+  const bg = heroColor ?? primaryColor;
+  const logo = imgUrl(config.images.hero);
+
+  return (
+    <section id="hjem" className="relative min-h-screen flex items-center overflow-hidden" style={{ backgroundColor: bg }}>
+      <div className="absolute inset-0 pointer-events-none"
+        style={{ background: `radial-gradient(ellipse at 75% 50%, ${accentColor}26, transparent 60%)` }} />
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 pt-28 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="order-2 lg:order-1 text-center lg:text-left">
+          <p className="animate-fade-in font-[family-name:var(--font-inter)] text-xs tracking-[0.4em] uppercase mb-6" style={{ color: accentColor }}>
+            {hero.eyebrow}
+          </p>
+          <h1 className="animate-fade-in-up animate-delay-100 font-[family-name:var(--font-playfair)] text-5xl sm:text-6xl xl:text-7xl font-semibold leading-tight tracking-tight mb-6">
+            <span style={{ color: textColor }}>{hero.headline}</span>{" "}
+            <span style={{ color: accentColor }}>{hero.headlineAccent}</span>
+          </h1>
+          <p className="animate-fade-in-up animate-delay-300 font-[family-name:var(--font-inter)] text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-light mb-10 text-white/70">
+            {hero.subheadline}
+          </p>
+          <div className="animate-fade-in-up animate-delay-400 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="#bestill" className="px-10 py-4 font-[family-name:var(--font-inter)] text-sm tracking-widest uppercase font-semibold transition-opacity duration-300 hover:opacity-90"
+              style={{ backgroundColor: accentColor, color: bg }}>
+              {hero.ctaText}
+            </a>
+            <a href="#tjenester" className="px-10 py-4 font-[family-name:var(--font-inter)] text-sm tracking-widest uppercase transition-all duration-300 text-white/70 hover:text-white"
+              style={{ border: "1px solid rgba(255,255,255,0.25)" }}>
+              {hero.ctaSecondary}
+            </a>
+          </div>
+          <p className="font-[family-name:var(--font-inter)] text-xs tracking-[0.3em] uppercase mt-12 text-white/30">{business.city}</p>
+        </div>
+
+        <div className="order-1 lg:order-2 flex justify-center animate-fade-in">
+          {logo && (
+            <div className="w-full max-w-[280px] sm:max-w-sm lg:max-w-md aspect-square overflow-hidden"
+              style={{ border: `1px solid ${accentColor}66`, boxShadow: `0 0 80px ${accentColor}33` }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={logo} alt={business.name} className="w-full h-full object-cover" />
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Hero() {
   const { variant } = config.hero;
+  if (variant === "logo")    return <LogoHero />;
   if (variant === "split")   return <SplitHero />;
   if (variant === "minimal") return <MinimalHero />;
   return <FullscreenHero />;

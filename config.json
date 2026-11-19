@@ -28,7 +28,7 @@
     "contact"
   ],
   "hero": {
-    "variant": "fullscreen",
+    "variant": "logo",
     "eyebrow": "Frisør & Klinikk · 4 lokasjoner",
     "headline": "Rio",
     "headlineAccent": "Frisør og Klinikk",
@@ -246,7 +246,7 @@
     "subheading": "Ring din nærmeste lokasjon eller send oss en e-post, så hjelper vi deg med å bestille time."
   },
   "images": {
-    "hero": "/rio/hero-klinikk.jpeg",
+    "hero": "/rio/hero-logo.jpeg",
     "about": "/rio/salon-bright.jpeg",
     "logo": "/rio/logo.jpeg",
     "gallery": [
